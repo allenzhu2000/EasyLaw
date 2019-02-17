@@ -1,2 +1,24 @@
+<!-- views/index.ejs -->
+<br>
+<h2>Clauses to be aware of</h2>
+<% if (messages.success) { %>
+<div class="flash flash-success">
+    <% if (outs.length !== 0) { %>
+        <% outs.forEach(([sentence, warning]) => { %>
+            <div class="row">
+                <div class="column1" >
+                    <div><%= sentence %></div>
+                </div>
+                <div class="column" >
+                    <br>
+                </div>
+                <div class="column2" >
+                    <div><%= warning %></div>
+                </div>
+            </div>
+            <br>
+        <% }) %>
+    <% } %>
+</div>
+<% } %>
 
-<h1>Working With Forms in Node.js</h1>
